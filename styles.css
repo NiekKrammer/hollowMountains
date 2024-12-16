@@ -1,0 +1,676 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #fcfdef;
+  min-height: 100dvh;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  background-size: 200%;
+  text-align: center;
+  background-image: linear-gradient(
+    105deg,
+    #d16ba5,
+    #86a8e7,
+    #04ae9d,
+    #86a8e7,
+    #d16ba5
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: text 10s linear infinite both;
+  margin-bottom: 12px;
+
+  & p {
+    font-size: 16px;
+  }
+}
+
+button:hover,
+a:hover,
+input:hover {
+  opacity: 0.9;
+}
+
+button:focus {
+  transform: scale(0.97);
+}
+
+.success_message {
+  width: fit-content;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+.error_message {
+  width: fit-content;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+@keyframes text {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 200% 200%;
+  }
+}
+
+/* --- herosection --- */
+& .herosection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 100px;
+
+  & img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 3%;
+  margin-bottom: 50px;
+
+  & img {
+    width: 130px;
+  }
+
+  & .roleTag_loguitBtn {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  & span {
+    font-size: 13px;
+    color: gray;
+  }
+
+  & a {
+    background-color: #04ae9d;
+    color: #fff;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+/* --- index pagina --- */
+.index_page_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  background-color: #ffffff;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  margin: 10px auto;
+  border-radius: 6px;
+  padding: 24px 12px;
+
+  & img {
+    width: 60px;
+    margin: auto;
+  }
+
+  & h2 {
+    text-align: center;
+    color: #111;
+    font-size: 22px;
+    margin: 6px 0 16px;
+  }
+
+  & input,
+  select {
+    margin: 6px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+
+  & input[type="submit"] {
+    background-color: #04ae9d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  & button {
+    width: fit-content;
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    color: #04ae9d;
+    text-decoration: underline;
+    background-color: transparent;
+  }
+}
+
+.registreer_form {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  form {
+    width: 90%;
+  }
+}
+
+/* --- manager pagina  --- */
+.managerPagina {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 24px;
+
+  & h2 {
+    color: #111;
+  }
+
+  & .genereerOverzichtTekst {
+    width: 300px;
+    margin: 6px 0 20px;
+    color: #747171;
+  }
+
+  & .formGenereerOverzichtAttractie {
+    max-width: 475px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+
+    & label {
+      font-size: 14px;
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    & input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    & button {
+      width: 100%;
+      padding: 10px;
+      background-color: #04ae9d;
+      color: white;
+      font-size: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+  & .overzicht_p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .gegenereerdeOverzicht_p {
+    margin: 4px 0 10px;
+  }
+
+  & .overzichtAttractieTabel {
+    max-width: 1200px;
+    overflow-x: scroll;
+  }
+
+  & table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  & th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: #f9f9f9;
+  }
+
+  & th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+
+  & .personeelH2 {
+    color: #111;
+    margin-top: 60px;
+
+    & i {
+      color: #111;
+    }
+  }
+
+  & .search_field {
+    width: 300px;
+    box-shadow: 0 0 3px #cccccc80;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 14px;
+    margin: 10px 0 30px 0;
+  }
+}
+
+.personeelContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  & .personeelKaart {
+    width: 400px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  & h3 {
+    color: #111;
+    margin-bottom: 12px;
+  }
+
+  & i {
+    margin-right: 8px;
+  }
+
+  & p {
+    color: #222;
+    margin: 6px 0;
+  }
+
+  & .password {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 350px;
+    display: inline-block;
+  }
+
+  & .wijzig_rol_btn {
+    background-color: #04ae9d;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 4px 0;
+  }
+
+  & .verwijder_medewerker_btn {
+    background-color: #e21e1e;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 4px 0;
+  }
+
+  & form {
+    margin-top: 10px;
+  }
+
+  & select {
+    margin-right: 10px;
+  }
+}
+
+.form_wijzig_rol select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* --- beheerder pagina --- */
+.beheerderPagina {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 24px;
+
+  & .form_text_section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  & .introSection {
+    display: flex;
+    margin: 25px 0 0 0;
+
+    & .infoIcon {
+      font-size: 20px;
+      margin-right: 5px;
+      color: #696762;
+    }
+
+    & .introtext {
+      max-width: 450px;
+    }
+  }
+
+  & .upload_attractie_form {
+    width: 450px;
+    padding: 16px;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+
+    & h2 {
+      margin-bottom: 20px;
+    }
+
+    & .nameRide {
+      color: #494848;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    & .attractieFotoOnderhoudsschema {
+      margin-top: 10px;
+      border-radius: 0;
+    }
+
+    & input,
+    select,
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    & textarea {
+      min-height: 100px;
+    }
+
+    & img {
+      width: 100%;
+    }
+
+    & .submit_btn {
+      width: 100%;
+      background-color: #04ae9d;
+      padding: 10px;
+      border-radius: 5px;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    & .delete_attractie_btn {
+      width: 100%;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      padding: 10px;
+      background-color: #e21e1e;
+      color: #fefefe;
+    }
+  }
+
+  & .attractiesTitle {
+    font-size: 28px;
+    color: #1d1d1d;
+    margin: 10px 0 24px 0;
+    text-align: center;
+  }
+
+  .attracties {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 120px;
+
+    & .attractieCard {
+      max-width: 350px;
+      height: 100%;
+      background-color: #e9e9e9;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    & .attractieCardBottom {
+      padding: 0 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    & h3 {
+      color: #111;
+      font-size: 20px;
+    }
+
+    & img {
+      height: 300px;
+      width: 100%;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    & p {
+      color: #111;
+    }
+
+    & .iconCard {
+      color: #444;
+    }
+
+    & .CardEditLink {
+      font-size: 14px;
+      width: fit-content;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      padding: 6px 12px;
+      background-color: #2771a1;
+      color: #fefefe;
+      & i {
+        margin-right: 6px;
+      }
+    }
+
+    & .CardEditSchema {
+      font-size: 14px;
+      width: fit-content;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      padding: 6px 12px;
+      background-color: #27a15a;
+      color: #fefefe;
+      & i {
+        margin-right: 6px;
+      }
+    }
+  }
+}
+
+.beheerderPagina.onderhoudsschema {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 50px 0;
+
+  & h2 {
+    text-align: center;
+  }
+
+  & h3 {
+    font-size: 20px;
+    margin: 30px 0 10px 0;
+  }
+
+  & span {
+    color: #494848;
+  }
+
+  & table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  & table th,
+  table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  & table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  & table th {
+    background-color: #6d6e6e;
+    color: white;
+    padding: 10px;
+  }
+}
+
+.goBackBtn {
+  width: fit-content;
+  font-size: 14px;
+  background-color: #04ae9d;
+  padding: 6px 12px;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  margin: 20px;
+
+  & i {
+    margin-right: 2px;
+  }
+}
+
+/* --- monteur.php --- */
+.monteurPagina {
+  max-width: 1300px;
+  margin-left: 100px;
+  padding: 0 24px;
+
+  & h1 {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  & .taken-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  & .taak {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ecf0f1;
+    width: 375px;
+    height: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  & select {
+    padding: 4px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  & textarea {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-height: 125px;
+    max-height: 500px;
+    padding: 4px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 10px;
+  }
+
+  & .strong {
+    font-weight: 650;
+  }
+
+  & .updateTaskBtn {
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 6px 12px;
+    background-color: #2771a1;
+    color: #fefefe;
+  }
+}
+
+/* --- footer --- */
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 30px;
+}
